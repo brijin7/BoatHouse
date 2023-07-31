@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Barcode" targetNamespace="http://tempuri.org/Barcode.xsd" xmlns:mstns="http://tempuri.org/Barcode.xsd" xmlns="http://tempuri.org/Barcode.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Barcode" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Barcode" msprop:Generator_DataSetName="Barcode">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BarCodeGenerator" msprop:Generator_RowEvHandlerName="BarCodeGeneratorRowChangeEventHandler" msprop:Generator_RowDeletedName="BarCodeGeneratorRowDeleted" msprop:Generator_RowDeletingName="BarCodeGeneratorRowDeleting" msprop:Generator_RowEvArgName="BarCodeGeneratorRowChangeEvent" msprop:Generator_TablePropName="BarCodeGenerator" msprop:Generator_RowChangedName="BarCodeGeneratorRowChanged" msprop:Generator_RowChangingName="BarCodeGeneratorRowChanging" msprop:Generator_TableClassName="BarCodeGeneratorDataTable" msprop:Generator_RowClassName="BarCodeGeneratorRow" msprop:Generator_TableVarName="tableBarCodeGenerator" msprop:Generator_UserTableName="BarCodeGenerator">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BarCode" msprop:Generator_ColumnPropNameInRow="BarCode" msprop:Generator_ColumnPropNameInTable="BarCodeColumn" msprop:Generator_ColumnVarNameInTable="columnBarCode" msprop:Generator_UserColumnName="BarCode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CorpLogo" msprop:Generator_ColumnPropNameInRow="CorpLogo" msprop:Generator_ColumnPropNameInTable="CorpLogoColumn" msprop:Generator_ColumnVarNameInTable="columnCorpLogo" msprop:Generator_UserColumnName="CorpLogo" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

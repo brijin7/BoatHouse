@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReceiptBalanceRefund" targetNamespace="http://tempuri.org/ReceiptBalanceRefund.xsd" xmlns:mstns="http://tempuri.org/ReceiptBalanceRefund.xsd" xmlns="http://tempuri.org/ReceiptBalanceRefund.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReceiptBalanceRefund" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ReceiptBalanceRefund" msprop:Generator_UserDSName="ReceiptBalanceRefund">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReceiptBalanceRefund" msprop:Generator_TableClassName="ReceiptBalanceRefundDataTable" msprop:Generator_TableVarName="tableReceiptBalanceRefund" msprop:Generator_TablePropName="_ReceiptBalanceRefund" msprop:Generator_RowDeletingName="ReceiptBalanceRefundRowDeleting" msprop:Generator_RowChangingName="ReceiptBalanceRefundRowChanging" msprop:Generator_RowEvHandlerName="ReceiptBalanceRefundRowChangeEventHandler" msprop:Generator_RowDeletedName="ReceiptBalanceRefundRowDeleted" msprop:Generator_UserTableName="ReceiptBalanceRefund" msprop:Generator_RowChangedName="ReceiptBalanceRefundRowChanged" msprop:Generator_RowEvArgName="ReceiptBalanceRefundRowChangeEvent" msprop:Generator_RowClassName="ReceiptBalanceRefundRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BookingId" msprop:Generator_ColumnVarNameInTable="columnBookingId" msprop:Generator_ColumnPropNameInRow="BookingId" msprop:Generator_ColumnPropNameInTable="BookingIdColumn" msprop:Generator_UserColumnName="BookingId" type="xs:string" minOccurs="0" />
+              <xs:element name="BookingDate" msprop:Generator_ColumnVarNameInTable="columnBookingDate" msprop:Generator_ColumnPropNameInRow="BookingDate" msprop:Generator_ColumnPropNameInTable="BookingDateColumn" msprop:Generator_UserColumnName="BookingDate" type="xs:string" minOccurs="0" />
+              <xs:element name="CollectedAmount" msprop:Generator_ColumnVarNameInTable="columnCollectedAmount" msprop:Generator_ColumnPropNameInRow="CollectedAmount" msprop:Generator_ColumnPropNameInTable="CollectedAmountColumn" msprop:Generator_UserColumnName="CollectedAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BillAmount" msprop:Generator_ColumnVarNameInTable="columnBillAmount" msprop:Generator_ColumnPropNameInRow="BillAmount" msprop:Generator_ColumnPropNameInTable="BillAmountColumn" msprop:Generator_UserColumnName="BillAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BalanceAmount" msprop:Generator_ColumnVarNameInTable="columnBalanceAmount" msprop:Generator_ColumnPropNameInRow="BalanceAmount" msprop:Generator_ColumnPropNameInTable="BalanceAmountColumn" msprop:Generator_UserColumnName="BalanceAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Rstatus" msprop:Generator_ColumnVarNameInTable="columnRstatus" msprop:Generator_ColumnPropNameInRow="Rstatus" msprop:Generator_ColumnPropNameInTable="RstatusColumn" msprop:Generator_UserColumnName="Rstatus" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReceiptBalanceSettled" msprop:Generator_TableClassName="ReceiptBalanceSettledDataTable" msprop:Generator_TableVarName="tableReceiptBalanceSettled" msprop:Generator_TablePropName="ReceiptBalanceSettled" msprop:Generator_RowDeletingName="ReceiptBalanceSettledRowDeleting" msprop:Generator_RowChangingName="ReceiptBalanceSettledRowChanging" msprop:Generator_RowEvHandlerName="ReceiptBalanceSettledRowChangeEventHandler" msprop:Generator_RowDeletedName="ReceiptBalanceSettledRowDeleted" msprop:Generator_UserTableName="ReceiptBalanceSettled" msprop:Generator_RowChangedName="ReceiptBalanceSettledRowChanged" msprop:Generator_RowEvArgName="ReceiptBalanceSettledRowChangeEvent" msprop:Generator_RowClassName="ReceiptBalanceSettledRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BookingId" msprop:Generator_ColumnVarNameInTable="columnBookingId" msprop:Generator_ColumnPropNameInRow="BookingId" msprop:Generator_ColumnPropNameInTable="BookingIdColumn" msprop:Generator_UserColumnName="BookingId" type="xs:string" minOccurs="0" />
+              <xs:element name="BookingDate" msprop:Generator_ColumnVarNameInTable="columnBookingDate" msprop:Generator_ColumnPropNameInRow="BookingDate" msprop:Generator_ColumnPropNameInTable="BookingDateColumn" msprop:Generator_UserColumnName="BookingDate" type="xs:string" minOccurs="0" />
+              <xs:element name="CollectedAmount" msprop:Generator_ColumnVarNameInTable="columnCollectedAmount" msprop:Generator_ColumnPropNameInRow="CollectedAmount" msprop:Generator_ColumnPropNameInTable="CollectedAmountColumn" msprop:Generator_UserColumnName="CollectedAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BillAmount" msprop:Generator_ColumnVarNameInTable="columnBillAmount" msprop:Generator_ColumnPropNameInRow="BillAmount" msprop:Generator_ColumnPropNameInTable="BillAmountColumn" msprop:Generator_UserColumnName="BillAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BalanceAmount" msprop:Generator_ColumnVarNameInTable="columnBalanceAmount" msprop:Generator_ColumnPropNameInRow="BalanceAmount" msprop:Generator_ColumnPropNameInTable="BalanceAmountColumn" msprop:Generator_UserColumnName="BalanceAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RStatus" msprop:Generator_ColumnVarNameInTable="columnRStatus" msprop:Generator_ColumnPropNameInRow="RStatus" msprop:Generator_ColumnPropNameInTable="RStatusColumn" msprop:Generator_UserColumnName="RStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="RePaymentType" msprop:Generator_ColumnVarNameInTable="columnRePaymentType" msprop:Generator_ColumnPropNameInRow="RePaymentType" msprop:Generator_ColumnPropNameInTable="RePaymentTypeColumn" msprop:Generator_UserColumnName="RePaymentType" type="xs:string" minOccurs="0" />
+              <xs:element name="RefunderName" msprop:Generator_ColumnVarNameInTable="columnRefunderName" msprop:Generator_ColumnPropNameInRow="RefunderName" msprop:Generator_ColumnPropNameInTable="RefunderNameColumn" msprop:Generator_UserColumnName="RefunderName" type="xs:string" minOccurs="0" />
+              <xs:element name="ConfigName" msprop:Generator_ColumnVarNameInTable="columnConfigName" msprop:Generator_ColumnPropNameInRow="ConfigName" msprop:Generator_ColumnPropNameInTable="ConfigNameColumn" msprop:Generator_UserColumnName="ConfigName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

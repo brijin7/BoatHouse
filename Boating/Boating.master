@@ -1,0 +1,665 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Boating/Boating.master.cs" Inherits="Boating_Boating" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> Boating</title>
+
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <script type="text/javascript" src="../Scripts/sweetalert.min.js"></script>
+
+    <%--   <script type="text/javascript">
+        function preventBack() { window.history.forward(1); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>--%>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+
+    <%-- <link rel="stylesheet" type="text/css" href="../css/JQuery.css" />
+    <link rel="stylesheet" type="text/css" href="../css/BoatingSystem.css" />  
+    <link rel="stylesheet" type="text/css" href="../css/checkBox.css" />--%>
+
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script
+        src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+        integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+        crossorigin="anonymous"></script>
+    <%--  <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>--%>
+
+    <script type="text/javascript">
+        function successalert(sMsg) {
+            swal({
+                title: 'Boating',
+                text: sMsg,
+                icon: "success"
+            });
+        }
+
+        function infoalert(sMsg) {
+            swal({
+                title: 'Boating',
+                text: sMsg,
+                icon: "info"
+            });
+        }
+
+        function erroralert(sMsg) {
+            swal({
+                title: 'Boating',
+                text: sMsg,
+                icon: "error"
+            });
+        }
+
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <style>
+        .dropdown-menu1233 {
+            position: absolute !important;
+            left: 79%;
+            margin-top: -38px;
+        }
+
+        .teeest1 {
+            display: block;
+            padding: 10px 20px !important;
+            clear: both;
+            font-weight: 600;
+            line-height: 1.42857143;
+            color: #0268ba;
+            white-space: nowrap;
+            font-size: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-submenu1 {
+            font-size: 12px;
+        }
+
+            .dropdown-submenu1:hover .dropdown-menu1233 {
+                display: block !important;
+            }
+
+        .blink {
+            animation: blink-animation 1s linear infinite;
+            -webkit-animation: blink-animation 1s linear infinite;
+        }
+
+        @keyframes blink-animation {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes blink-animation {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        let getDate = `${(new Date()).getDate()}${(new Date()).getMonth()}${(new Date()).getFullYear()}`;
+        let head = document.getElementsByTagName("head")[0];
+
+
+
+        //<link rel="stylesheet" type="text/css" href="../css/JQuery.css" />
+        let link_JQuery = document.createElement('link');
+        link_JQuery.rel = 'StyleSheet';
+        link_JQuery.type = 'text/css';
+        link_JQuery.href = '../css/JQuery.css?v=' + getDate;
+        head.appendChild(link_JQuery);
+
+
+
+        //<link rel="stylesheet" type="text/css" href="../css/BoatingSystem.css" />
+        let link_BoatingSystem = document.createElement('link');
+        link_BoatingSystem.rel = 'StyleSheet';
+        link_BoatingSystem.type = 'text/css';
+        link_BoatingSystem.href = '../css/BoatingSystem.css?v=' + getDate;
+        head.appendChild(link_BoatingSystem);
+
+
+
+        //<link rel="stylesheet" type="text/css" href="../css/checkBox.css" />
+        let link_checkBox = document.createElement('link');
+        link_checkBox.rel = 'StyleSheet';
+        link_checkBox.type = 'text/css';
+        link_checkBox.href = '../css/checkBox.css?v=' + getDate;
+        head.appendChild(link_checkBox);
+    </script>
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server" ScriptMode="Release">
+        </asp:ScriptManager>
+        <div class="page-wrapper my-theme toggled">
+            <div style="top: 0; z-index: 99999; background-color: white">
+                <div class="row m-0">
+                    <div class="col-sm-5 col-xs-12">
+                        <img class="img-fluid" src="<%=Session["CorpLogo"].ToString()== "" ? "../images/TTDCLogo.svg" : Session["CorpLogo"].ToString()  %>" alt="Logo" style="height: 80px !important" />
+                    </div>
+                    <div class="col-sm-3 col-xs-12">
+                        <span class="sp2">Welcome &nbsp;
+                              <asp:Label ID="lblLoginUser" runat="server" Font-Bold="true"></asp:Label>
+                        </span>
+                        <span class="sp2">
+                            <asp:Label ID="lblBoatHouse" runat="server" Font-Bold="true"></asp:Label>
+                        </span>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <span class="sp1">Boating System</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-sm">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li runat="server" id="liDashboard"><a class="nav-link" href="NewDashboard.aspx" runat="server"><i class="fas fa-tachometer-alt"></i>&nbsp; Dashboard</a></li>
+                        
+                        <li class="dropdown" runat="server" id="liCommonMaster" visible="false">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" runat="server"><i class="fas fa-landmark"></i>&nbsp; Common Masters<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+
+                                <li runat="server"><a runat="server" href="~/Common/CorporateOffice.aspx">Corporate Office</a></li>
+                                <div runat="server" class="dropdown-submenu1" id="div2">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop0" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Master Data Setup<%-- <i class="fas fa-caret-right"></i>--%>
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="bmViewConfigType" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Common/DataType.aspx">Data Type</a>
+                                        <a id="bmConfigMaster" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Common/MasterData.aspx">Master Data</a>
+
+                                    </ul>
+                                </div>
+                               
+                                <li runat="server"><a runat="server" href="~/Common/BranchMaster.aspx">Branch Master</a></li>
+                                <li runat="server"><a runat="server" href="~/Common/ShiftMaster.aspx">Shift Master</a></li>
+                                <li runat="server"><a runat="server" href="~/Common/BranchDesignationMap.aspx">Branch Designation Mapping</a></li>
+
+                                <li runat="server"><a runat="server" href="~/Common/SadminUser.aspx">Sadmin Users</a></li>
+                                <li runat="server"><a runat="server" href="~/Common/AdminUser.aspx">Admin Users</a></li>
+
+
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown" runat="server" id="liBHMaster" visible="false">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" runat="server"><i class="fas fa-landmark"></i>&nbsp; Boat House Masters<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li runat="server"><a runat="server" href="~/Masters/ConfigurationMaster.aspx">Common Masters</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/TaxMaster.aspx">Tax Master</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/BoatHouseMaster.aspx">Boat House Master</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/OfferMaster.aspx">Offer/Discount Master</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/PaymentAccountDetails.aspx">Payment Account Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" runat="server" id="liCMMaster" visible="false">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" runat="server"><i class="fas fa-landmark"></i>&nbsp; Common<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li runat="server"><a runat="server" href="~/Common/BranchDesignationMap.aspx">Branch Designation Mapping</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/TaxMaster.aspx">Tax Master</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/OfferMaster.aspx">Offer/Discount Master</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown" runat="server" id="liMaster" visible="false">
+                            <a class="dropdown-toggle nav-link" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-landmark"></i>&nbsp; Masters
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li runat="server"><a id="bmBHoMstr" runat="server" class="dropdown-item" href="ViewBoatHouseMaster.aspx">Boat House Master</a></li>
+                                <li runat="server"><a id="A3" runat="server" class="dropdown-item" href="WeekDaysTariffMaster.aspx">Week Days & Week End Master</a></li>
+
+                                <li runat="server"><a id="bmEmpUser" runat="server" class="dropdown-item" href="EmployeeUser.aspx">User Creation</a></li>
+                                <li runat="server"><a id="bmUserAccess" runat="server" class="dropdown-item" href="UserAccessRights.aspx">User Access Rights</a></li>
+
+                                <div runat="server" class="dropdown-submenu1" id="divRights">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop1" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Scan User Access Rights
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="bmScanUSerAccess" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="ScanUserAccessRights.aspx">Scan User Access Rights </a>
+                                        <a id="bmUserDevAllocation" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="UserBasedDeviceAllocation.aspx">User Based Device Allocation </a>
+                                    </ul>
+                                </div>
+
+                                <div runat="server" class="dropdown-submenu1" id="div1">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop2" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Boating Masters
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="bmViewTaxMaster" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="ViewTaxMaster.aspx">Tax Master</a>
+                                        <a id="bmBTyMstr" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="BoatTypeMaster.aspx">Boat Type Master</a>
+                                        <a id="bmBSeMstr" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="BoatSeatMaster.aspx">Boat Seater Master</a>
+                                        <a id="bmBRaMstr" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="BoatRateMaster.aspx">Boat Rate Master</a>
+                                        <a id="bmBoaMstr" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="BoatMaster.aspx">Boat Master</a>
+                                        <a id="A4" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="BoatSlotMaster.aspx">Boat Time Slot Master</a>
+                                        <a id="bmDeactiveSlotMstr" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="DeactivateBoatSlotMaster.aspx" visible="false">Boat Time Deactive Slot Master</a>
+
+                                    </ul>
+                                </div>
+
+                                <li runat="server"><a id="bmOSeMstr" runat="server" class="dropdown-item" href="OtherServices.aspx">Other Services</a></li>
+
+                                <li runat="server"><a id="bmCancelAmount" runat="server" class="dropdown-item" href="CancellationRule.aspx">Cancel / Re-Schedule Rule </a></li>
+                                <li runat="server"><a id="bmViewOfferDiscount" runat="server" class="dropdown-item" href="ViewOfferDiscount.aspx">View Offer/Discount </a></li>
+
+                                <div runat="server" class="dropdown-submenu1" id="divRower">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop3" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Rower
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="bmRowerMaster" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="RowerMaster.aspx">Rower / Driver Master </a>
+                                        <a id="bmRowerBoatAssign" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="RowerBoatAssign.aspx">Rower Boat Assign </a>
+                                    </ul>
+                                </div>
+
+                                <div runat="server" class="dropdown-submenu1" id="liRestaurant">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop4" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Restaurant
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="RFoodCategory" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Restaurants/FoodCategory.aspx">Food Category </a>
+                                        <a id="RFoodItem" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Restaurants/FoodItemMaster.aspx">Food Item Master </a>
+                                        <%--  <a id="A1" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Restaurants/StockEntry.aspx">Stock Entry Maintenance</a>--%>
+                                    </ul>
+                                </div>
+
+                                <div runat="server" class="dropdown-submenu1" id="divPrinting">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop5" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Printing
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="bmPrintInstruction" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="PrintingInstruction.aspx">Printing Instruction </a>
+                                        <a id="bmPrintRights" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Boating/PrintingRights.aspx">Printing Rights </a>
+                                    </ul>
+                                </div>
+
+                                <li runat="server"><a id="bmPaymentUPI" runat="server" class="dropdown-item" href="PaymentUPIDetails.aspx">Payment UPI Details</a></li>
+                                <li runat="server"><a id="bmItMstr" runat="server" class="dropdown-item" href="ItemMaster.aspx">Item Master</a></li>
+                                <li runat="server"><a id="bmBoatMaterial" runat="server" class="dropdown-item" href="BoatMaterialConsumption.aspx">Boat Consumption </a></li>
+                                <li runat="server"><a id="AccountUnlock" runat="server" class="dropdown-item" href="~/Sadmin/AccountUnlock.aspx" visible="false">Account Unlock</a></li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown" runat="server" id="liBooking" visible="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop6" data-toggle="dropdown">
+                                <i class="fas fa-book-open"></i>&nbsp; Booking
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li runat="server"><a id="bBoatBooking" runat="server" class="dropdown-item" href="BoatBookingFinal.aspx">Boat Booking</a></li>
+                                <%--      <li runat="server"><a id="bBulkBoatBooking" runat="server" class="dropdown-item" href="BulkBoatBooking.aspx">Bulk Boat Booking</a></li>
+                                <li runat="server"><a id="bCreditBoatBooking" runat="server" class="dropdown-item" href="CreditBoatBooking.aspx" visible="false">Credit Boat Booking</a></li>--%>
+
+                                <li runat="server"><a id="bAdditionalTicket" runat="server" class="dropdown-item" href="AdditionalTicket.aspx">Additional Ticket</a></li>
+
+                                <li runat="server"><a id="bBOtherService" runat="server" class="dropdown-item" href="BookingOtherServices.aspx">Other Services</a></li>
+                                <%--    <li runat="server"><a id="bBBulkOtherService" runat="server" class="dropdown-item" href="BulkOtherServices.aspx">Bulk Other Services</a></li>--%>
+
+                                <li runat="server"><a id="RBService" runat="server" class="dropdown-item" href="~/Restaurants/BookingRestaurantServices.aspx">Restaurant Services</a></li>
+                                <%--  <li runat="server"><a id="RBulkRestaurant" runat="server" class="dropdown-item" href="~/Restaurants/BulkRestaurantService.aspx">Bulk Restaurant Services</a></li>--%>
+
+                                <%-- <li runat="server"><a id="bBTripSheet" runat="server" class="dropdown-item" href="TripSheetWeb.aspx">Trip Sheet </a></li> old--%>
+                                <li runat="server"><a id="bBTripSheet_Test" runat="server" class="dropdown-item" href="TripSheetWeb.aspx">Trip Sheet </a></li>
+
+                                <%--<li runat="server"><a id="bBTripSheet_Single" runat="server" class="dropdown-item" href="~/Boating/TripSheetWeb_Single.aspx">Trip Sheet_Single </a></li>--%>
+                                <%--<li runat="server"><a id="bBSmartTrip" runat="server" class="dropdown-item" href="ScanTripSheet.aspx" visible="false">Smart Trip Sheet</a></li>--%>
+
+                                <li runat="server"><a id="bBSmartTrip" runat="server" class="dropdown-item" href="~/ScanTripSheetWeb.aspx">Smart Trip Sheet</a></li>
+
+                                <%-- <li runat="server"><a id="bBSmartTrip_new" runat="server" class="dropdown-item" href="~/ScanTripSheetWebNew.aspx">Smart Trip Sheet New</a></li>--%>
+                                <%--   <li runat="server"><a id="A2" runat="server" class="dropdown-item" href="IndividualTripSheetWeb.aspx">Individual Trip Sheet</a></li>
+                                <li runat="server"><a id="A5" runat="server" class="dropdown-item" href="~/IndividualSmartTripSheetWeb.aspx">Individual Smart Trip Sheet</a></li>--%>
+
+                                <%-- <li runat="server"><a id="bBChangeBoatDetails" runat="server" class="dropdown-item" href="ChangeBoatDetails.aspx">Change Boat Details </a></li>
+                                <li runat="server"><a id="bBChangeTripDetails" runat="server" class="dropdown-item" href="ChangeTripSheet.aspx">Change Trip Sheet</a></li>
+                                <li runat="server"><a id="bBBoatRetrip" runat="server" class="dropdown-item" href="ReTripEntryDtl.aspx">Boat ReTrip Details</a></li>--%>
+
+                                <li runat="server"><a id="bBCanlMstr" runat="server" class="dropdown-item" href="BoatCancellation.aspx">Cancellation</a></li>
+                                <li runat="server"><a id="bBReSeMstr" runat="server" class="dropdown-item" href="ReSchedule.aspx">Re-scheduling</a></li>
+                                <li runat="server"><a id="bBBoardingPass" runat="server" class="dropdown-item" href="~/Boating/Generateboardingpass.aspx">Generate Boarding Pass</a></li>
+                                <li runat="server"><a id="bBManualTicket" runat="server" class="dropdown-item" href="~/Masters/GenerateManualTicketAfTran.aspx">Generate Manual Ticket</a></li>
+
+
+                                <div runat="server" class="dropdown-submenu1" id="divRights1">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop99" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Exception Approvals </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="bBChangeBoatDetails" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="ChangeBoatDetails.aspx?rt=0">Change Boat</a>
+                                        <a id="bBChangeTripDetails" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="ChangeTripSheet.aspx">Change Trip Sheet</a>
+                                        <%--                           <a id="bBChangeTripDetailsNew" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="ChangeTripSheetNew.aspx">Change Trip Sheet New</a>--%>
+                                        <a id="bBBoatRetrip" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="ReTripEntryDtl.aspx">Re-Trip Entry</a>
+                                    </ul>
+                                </div>
+
+                                <%--Newly Added By Imran For Android App--%>
+                                <%-- <li runat="server"><a id="bBAndroidApp" runat="server" class="dropdown-item" href="https://paypre.in/boating/apps.html">Download Android App</a></li>--%>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown" runat="server" id="liTransactions" visible="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop7" data-toggle="dropdown"><i class="fas fa-exchange-alt"></i>&nbsp; Transactions
+                            </a>
+                            <ul class="dropdown-menu">
+                                <div runat="server" class="dropdown-submenu1" id="divRefundDetails">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardropRefundDetails" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Refund Details </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="bTDepositRefund" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="TripSheetSettelement.aspx">Deposit Refund</a>
+                                        <a id="btReceiptBalance" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="ReceiptBalanceDetails.aspx">Receipt Balance Refund</a>
+                                    </ul>
+                                </div>
+                                <li runat="server"><a id="bTRower" runat="server" class="dropdown-item" href="RowerSettlement.aspx">Rower Settlement</a></li>
+                                <li runat="server"><a id="bTRefundCounter" runat="server" class="dropdown-item" href="Refund.aspx">Refund Counter</a></li>
+                                <li runat="server"><a id="bFSEMain" runat="server" class="dropdown-item" style="text-decoration: none; background-color: white" href="~/Restaurants/StockEntry.aspx">Restaurant Stock Entry</a></li>
+                                <li runat="server"><a id="bTMPMstr" runat="server" class="dropdown-item" href="MaterialPurchase.aspx">Material Purchase</a></li>
+                                <li runat="server"><a id="bTMIMstr" runat="server" class="dropdown-item" href="MaterialIssue.aspx">Material Issue</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown" runat="server" id="liReports" visible="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop8" data-toggle="dropdown"><i class="fas fa-bars"></i>&nbsp; Reports
+                            </a>
+                            <ul class="dropdown-menu">
+                                <div runat="server" class="dropdown-submenu1" id="divPrintService">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop9" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Printing Receipt
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="rptPrintBoatBooking" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptBoatBooking.aspx">Print Boat Booking</a>
+                                        <a id="rptPrintAdditionalTicket" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptPrintAdditionalTicket.aspx">Print Additional Ticket</a>
+                                        <a id="rptPrintOtherService" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptBookingOtherSevices.aspx">Print Other Services</a>
+                                        <a id="rptPrintRestaurantService" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptPrintRestaurantServices.aspx">Print Restaurant Services</a>
+                                    </ul>
+                                </div>
+
+                                <div runat="server" class="dropdown-submenu1" id="divAbstractBooking">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop10" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Abstract Booking
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="rptAbstractBoatBooking" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptAbstractBoatBooking.aspx">Abstract Boat Booking</a>
+                                        <a id="rptAbstractAdditionalTicket" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptAbstractAdditionalTicket.aspx">Abstract Additional Ticket</a>
+                                        <a id="rptAbstractOtherService" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptOtherServices.aspx">Abstract Other Services</a>
+                                        <%-- <a id="rptAbstractRestaurant" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptRestaurantV1.aspx">Abstract Restaurant Services</a>--%>
+                                        <a id="rptAbstractRestaurant" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptRestaurant.aspx">Abstract Restaurant Services</a>
+                                    </ul>
+                                </div>
+
+                                <div runat="server" class="dropdown-submenu1" id="divTripSheet">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop11" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Trip Sheet Details
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="rptBoatwiseTrip" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptBoatwiseTrip.aspx">Boat Wise Trip</a>
+                                        <a id="rptTripSheetSummary" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptTripSheetSummary.aspx">Trip Sheet Summary</a>
+                                        <a id="rptTripWiseCollection" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/TripWiseReport.aspx">Trip Wise Collection</a>
+                                        <a id="rptDepositStatus" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/DepositStatusReport.aspx">Deposit Status</a>
+                                        <a id="rptDiscount" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptDiscountDetails.aspx">Discount Report</a>
+                                        <a id="rptAbstractTripSheet" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="AbstractTripSheetReport.aspx">Cash In Hand</a>
+                                    </ul>
+                                </div>
+
+                                <div runat="server" class="dropdown-submenu1" id="divRptRower">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop12" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Rower Details
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="rptRowerCharges" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptRowerCharges.aspx">Rower Charges</a>
+                                        <a id="rptRowerSettlement" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptRowerSettlement.aspx">Rower Settlement</a>
+                                        <a id="rptBoatTypeRower" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RowerList.aspx">Boat Type Rower List</a>
+                                        <a id="rptExtndBtRides" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptExtndBtRides.aspx">Extended Boat Rides</a>
+
+                                    </ul>
+                                </div>
+
+                                <div runat="server" class="dropdown-submenu1" id="divCreditReport" visible="false">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop18" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Credit Report Details
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="rptCreditPrintBoat" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptCreditPrintBoatBooking.aspx">Print Boat Booking</a>
+                                        <a id="rptCreditTripWise" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Reports/RptCreditTripWiseDetails.aspx">Trip Wise Details</a>
+                                    </ul>
+                                </div>
+
+                                <li runat="server"><a id="rptAvalBoats" runat="server" class="dropdown-item" href="~/Reports/RptAvilBoatCap.aspx">Available Boats With Capacity</a></li>
+                                <li runat="server"><a id="rptBoatCancellation" runat="server" class="dropdown-item" href="~/Reports/RptBoatCancellation.aspx">Boat Cancellation</a></li>
+
+                                <li runat="server"><a id="rptChalanRegister" runat="server" class="dropdown-item" href="~/Reports/RptChalanRegister.aspx">Challan Register</a></li>
+                                <li runat="server"><a id="rptServiceWiseCollection" runat="server" class="dropdown-item" href="~/Reports/RptServiceWiseCollection.aspx">Service Wise Report</a></li>
+                                <li runat="server"><a id="rptUserBasedBooked" runat="server" class="dropdown-item" href="~/Reports/RptUBBookingIdReport.aspx">User Based Booking Details</a></li>
+                                <li runat="server"><a id="rptReceiptBalance" runat="server" class="dropdown-item" href="~/Reports/RptReceiptBalanceDetails.aspx">Receipt Balance Report</a></li>
+
+                                <li runat="server"><a id="rptReprintReport" runat="server" class="dropdown-item" href="~/Reports/RptReprint.aspx">Reprint Report</a></li>
+                                <li runat="server"><a id="rptQRCodeGeneration" runat="server" class="dropdown-item" href="~/Reports/BarCodePrinting.aspx">QR Code Generation</a></li>
+
+                                <%-- <li runat="server"><a id="rptBoatRate" runat="server" class="dropdown-item" href="~/Reports/BoatRateDetailsReport.aspx">Boat Rate Details</a></li>--%>
+
+                                <li runat="server"><a id="rptBoatInfoDisplay" runat="server" class="dropdown-item" href="~/BoatinfoDisplaynew3.aspx" visible="false">Boat Information Display</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown" runat="server" id="liKioskBooking" visible="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop13" data-toggle="dropdown"><i class="fas fa-book-open"></i>&nbsp; Kiosk Booking
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li runat="server"><a id="bKBoatBooking" runat="server" class="dropdown-item" href="KioskBoatBooking.aspx">Boat Booking</a></li>
+                                <li runat="server"><a id="bKOtherService" runat="server" class="dropdown-item" href="KioskOtherService.aspx">Other Services</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown" runat="server" id="liSadminMaster" visible="false">
+                            <a class="dropdown-toggle nav-link" href="#" id="navbardrop14" data-toggle="dropdown"><i class="fas fa-landmark"></i>&nbsp; Boat House Login
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li runat="server"><a id="bmBHLogin" runat="server" class="dropdown-item" href="~/Sadmin/BHLogin.aspx">Boat House Login</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown" runat="server" id="liHelp" visible="false">
+                            <a class="dropdown-toggle nav-link" href="#" id="navbardrop15" data-toggle="dropdown"><i class="fas fa-landmark"></i>&nbsp; Help
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li runat="server"><a id="liPrinterSetup" runat="server" class="dropdown-item" href="~/Help/PrinterSetup.aspx">Printer Setup</a></li>
+                                <li runat="server">
+                                    <asp:LinkButton ID="liNewComplaint" runat="server" class="dropdown-item" OnClick="liNewComplaint_Click">New Query</asp:LinkButton></li>
+                                <li runat="server">
+                                    <asp:LinkButton ID="liSentComplaint" runat="server" class="dropdown-item" OnClick="liSendComplaint_Click">Sent Queries</asp:LinkButton></li>
+                                <li runat="server">
+                                    <asp:LinkButton ID="liViewMessage" runat="server" class="dropdown-item" OnClick="liViewComplaint_Click">Received Message</asp:LinkButton></li>
+
+                            </ul>
+                        </li>
+
+                        <li runat="server" id="liAlert" visible="false">&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblStartResponse" CssClass="blink" runat="server" Font-Bold="true" Text="Amount Requested" ForeColor="Red" Font-Size="X-Large"></asp:Label></li>
+
+                        <li class="dropdown" runat="server" id="liOtherMaster" visible="false">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" runat="server"><i class="fas fa-landmark"></i>&nbsp; Other Masters<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li runat="server"><a runat="server" href="~/Masters/CarouselMaster.aspx">Carousel Master</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/CityMaster.aspx">City Master</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/LoactionMaster.aspx">Location Master</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/LocationGallery.aspx">Location Gallery</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/LocationAttTypeMap.aspx">Location Attraction Type Mapping</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/LocationCityMapping.aspx">Location City Mapping</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/ImportantContacts.aspx">Important Contacts / City wise</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/TTDCContacts.aspx">TTDC Contacts</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/FoodMaster.aspx">Food Master</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/CulturalEvents.aspx">Cultural Events</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/EventGallery.aspx">Events Gallery</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/OtherInfo.aspx">Other Info</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/OtherGallery.aspx">Other Gallery</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/ImportantLinks.aspx">Important Links</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/FeedBack.aspx">Feed back</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/Enquiry.aspx">Enquiry</a></li>
+                                <li runat="server"><a runat="server" href="~/Masters/ScrollingInfoLinks.aspx">Scrolling Info & Links</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown" runat="server" id="liPrematix" visible="false">
+                            <a class="dropdown-toggle nav-link" href="#" id="navbardrop16" data-toggle="dropdown"><i class="fas fa-landmark"></i>&nbsp; Prematix Admin
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li runat="server"><a id="bmUserDetails" runat="server" class="dropdown-item" href="~/Sadmin/ShowUserDetails.aspx">Show User Details</a></li>
+                                <li runat="server"><a id="bmOTPDetails" runat="server" class="dropdown-item" href="~/Sadmin/ShowOTPDetails.aspx">Show OTP Details</a></li>
+                                <li runat="server"><a id="bmGatewayDetails" runat="server" class="dropdown-item" href="~/Sadmin/GatewayDetails.aspx">Gateway Details</a></li>
+                                <li runat="server"><a id="bmEmailDetails" runat="server" class="dropdown-item" href="~/Sadmin/EmailIdPwd.aspx">Email Details</a></li>
+<%--                                <li runat="server"><a id="bmOfficeUser" runat="server" class="dropdown-item" href="~/Sadmin/OfficeUser.aspx">Office User</a></li> not going to be used in paypre(13 Jul 2023--%>
+                                <li runat="server"><a id="bmBoatHouseRights" runat="server" class="dropdown-item" href="~/Sadmin/BoatHouseRights.aspx">Boat House Rights</a></li>
+                                <li runat="server"><a id="bmPaymentRights" runat="server" class="dropdown-item" href="~/Sadmin/OnlinePaymentRights.aspx">Online Payment Block Rights</a></li>
+
+                                <div runat="server" class="dropdown-submenu1" id="divDevice">
+                                    <div class="dropdown dropright teeest1">
+                                        <a class="dropdown-toggle" href="#" id="navbardrop17" style="color: #0268ba; text-decoration: none;" data-toggle="dropdown">&nbsp; Device
+                                        </a>
+                                    </div>
+                                    <ul class="dropdown-menu1233" style="display: none; padding-left: 34px; border-radius: 25rem;">
+                                        <a id="bmAppVersion" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Sadmin/AppVersion.aspx">App Version</a>
+                                        <a id="bmDevice" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Sadmin/DeviceInformation.aspx">Device Information</a>
+                                        <a id="bmDeviceAllocation" runat="server" class="teeest1" style="text-decoration: none; background-color: white" href="~/Sadmin/DeviceAllocation.aspx">Device Allocation</a>
+                                    </ul>
+                                </div>
+                                <li runat="server"><a id="bmSadminAccessRights" visible="false" runat="server" class="dropdown-item" href="~/Sadmin/SadminAccessRights.aspx">Sadmin Access Rights</a></li>
+                                <li runat="server"><a id="bmSmsBlock" visible="false" runat="server" class="dropdown-item" href="~/Sadmin/SmsBlock.aspx">SMS Block</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown" runat="server" id="liComplaint" visible="false">
+                            <a class="dropdown-toggle nav-link" href="#" id="navbardrop19" data-toggle="dropdown"><i class="fas fa-ticket-alt"></i>&nbsp; Complaints
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li runat="server">
+                                    <asp:LinkButton ID="liNewMessage" runat="server" class="dropdown-item" OnClick="liNewComplaint_Click">New Message</asp:LinkButton></li>
+                                <li runat="server">
+                                    <asp:LinkButton ID="liSentMessage" runat="server" class="dropdown-item" OnClick="liSendComplaint_Click">Sent Messages</asp:LinkButton></li>
+                                <li runat="server">
+                                    <asp:LinkButton ID="liViewComplaint" runat="server" class="dropdown-item" OnClick="liViewComplaint_Click">Received Complaints</asp:LinkButton></li>
+                                <li runat="server"><a id="LateRefund" runat="server" class="dropdown-item" href="~/Sadmin/LateRefund.aspx" visible="true">Previous Day Refund</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" runat="server" id="liBack" visible="false">
+                            <asp:LinkButton class="nav-link" ID="lbtnBack" runat="server" OnClick="lbtnBack_Click"><i class="fas fa-arrow-left"></i>&nbsp; Boat House Login</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item" runat="server">
+                            <asp:LinkButton class="nav-link" ID="btnHome" runat="server" OnClick="btnHome_Click"><i class="fas fa-home"></i>&nbsp; Home</asp:LinkButton>
+                        </li>
+                        <%--Newly Added By Subalakshmi For Android App--%>
+                        <li class="nav-item" runat="server" id="liAndroid">
+                            <%-- <asp:LinkButton class="nav-link" ID="btnAndroid" runat="server"  href="https://paypre.in/boating/apps.html"><i class="fas fa-download"></i>&nbsp; Android</asp:LinkButton>--%>
+                            <asp:LinkButton class="nav-link" ID="btnAndroid" runat="server" href="../Boating/AndroidApp.aspx"><i class="fas fa-download"></i>&nbsp; Android</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item" runat="server">
+
+                            <%--  <a class="nav-link" href="https://paypre.in/boating/login" onclick="return confirm('Are you sure want Logout?')"><i class="fas fa-sign-out-alt"></i>&nbsp; Logout</a>--%>
+
+                            <asp:LinkButton class="nav-link" ID="lnkLogOut" runat="server" OnClick="lnkLogOut_Click"><i class="fas fa-sign-out-alt"></i>&nbsp; Logout</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container-fluid" style="margin-bottom: 3% !important">
+
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="main-footer">
+                <div id="clockbox">
+                    <p></p>
+                </div>
+                <div class="text-center">
+                    Copyright ©<asp:Label ID="lblCurrentYear" runat="server"></asp:Label>
+                    Boating. All rights reserved.
+                </div>
+                <div class="text-right">
+                    Version 1.0
+                </div>
+
+            </div>
+            <!-- page-content" -->
+        </div>
+
+        <!-- page-wrapper -->
+    </form>
+    <%--  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>--%>
+    <%-- <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js" type="text/javascript"></script>--%>
+    <%-- <script src="https://code.highcharts.com/highcharts.js" type="text/javascript"></script>--%>
+    <%--  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>--%>
+
+
+    <%--  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>--%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"
+        integrity="sha384-Oz2u38d0ZnNWE1m+AIMNNmk9a0EJEto9y2D3kXTaczVZucXieLf798xkusldWrLs" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css" type="text/css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.js"></script>
+
+    <%--<script src="../Scripts/exporting.js" type="text/javascript"></script>--%>
+    <script src="../Scripts/SiteMaster.js" type="text/javascript"></script>
+    <script src="../Scripts/GSTCalculation.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".gvv").prepend($("<thead></thead>").append($(".display").find("tr:first"))).dataTable({
+                "lengthMenu": [[10, 15, 20, 25, -1], [10, 15, 20, 25, "All"]] //value:item pair
+            });
+        });
+
+        tday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"); tmonth = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+        function GetClock() { d = new Date(); nday = d.getDay(); nmonth = d.getMonth(); ndate = d.getDate(); nyear = d.getYear(); nhour = d.getHours(); nmin = d.getMinutes(); nsec = d.getSeconds(); if (nyear < 1000) nyear = nyear + 1900; if (nhour == 0) { ap = " AM"; nhour = 12; } else if (nhour <= 11) { ap = " AM"; } else if (nhour == 12) { ap = " PM"; } else if (nhour >= 13) { ap = " PM"; nhour -= 12; } if (nmin <= 9) { nmin = "0" + nmin; } if (nsec <= 9) { nsec = "0" + nsec; } document.getElementById('clockbox').innerHTML = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + ""; setTimeout("GetClock()", 1000); } window.onload = GetClock;
+        function ClientPopulated(source, eventArgs) { if (source._currentPrefix != null) { var list = source.get_completionList(); var search = source._currentPrefix.toLowerCase(); for (var i = 0; i < list.childNodes.length; i++) { var text = list.childNodes[i].innerHTML; var index = text.toLowerCase().indexOf(search); } } }
+        function ClientItemSelected(source, e) { source.get_element().value = (document.all) ? e._item.innerText : e._item.textContent; }
+    </script>
+
+</body>
+</html>

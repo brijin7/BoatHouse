@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RowerSettlement" targetNamespace="http://tempuri.org/RowerSettlement.xsd" xmlns:mstns="http://tempuri.org/RowerSettlement.xsd" xmlns="http://tempuri.org/RowerSettlement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RowerSettlement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="RowerSettlement" msprop:Generator_UserDSName="RowerSettlement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RowerSettlement" msprop:Generator_TableClassName="RowerSettlementDataTable" msprop:Generator_TableVarName="tableRowerSettlement" msprop:Generator_RowChangedName="RowerSettlementRowChanged" msprop:Generator_TablePropName="_RowerSettlement" msprop:Generator_RowDeletingName="RowerSettlementRowDeleting" msprop:Generator_RowChangingName="RowerSettlementRowChanging" msprop:Generator_RowEvHandlerName="RowerSettlementRowChangeEventHandler" msprop:Generator_RowDeletedName="RowerSettlementRowDeleted" msprop:Generator_RowClassName="RowerSettlementRow" msprop:Generator_UserTableName="RowerSettlement" msprop:Generator_RowEvArgName="RowerSettlementRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SettlementId" msprop:Generator_ColumnVarNameInTable="columnSettlementId" msprop:Generator_ColumnPropNameInRow="SettlementId" msprop:Generator_ColumnPropNameInTable="SettlementIdColumn" msprop:Generator_UserColumnName="SettlementId" type="xs:string" minOccurs="0" />
+              <xs:element name="SettlementDate" msprop:Generator_ColumnVarNameInTable="columnSettlementDate" msprop:Generator_ColumnPropNameInRow="SettlementDate" msprop:Generator_ColumnPropNameInTable="SettlementDateColumn" msprop:Generator_UserColumnName="SettlementDate" type="xs:string" minOccurs="0" />
+              <xs:element name="RowerName" msprop:Generator_ColumnVarNameInTable="columnRowerName" msprop:Generator_ColumnPropNameInRow="RowerName" msprop:Generator_ColumnPropNameInTable="RowerNameColumn" msprop:Generator_UserColumnName="RowerName" type="xs:string" minOccurs="0" />
+              <xs:element name="SettlementAmt" msprop:Generator_ColumnVarNameInTable="columnSettlementAmt" msprop:Generator_ColumnPropNameInRow="SettlementAmt" msprop:Generator_ColumnPropNameInTable="SettlementAmtColumn" msprop:Generator_UserColumnName="SettlementAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BoatHouseId" msprop:Generator_ColumnVarNameInTable="columnBoatHouseId" msprop:Generator_ColumnPropNameInRow="BoatHouseId" msprop:Generator_ColumnPropNameInTable="BoatHouseIdColumn" msprop:Generator_UserColumnName="BoatHouseId" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatHouseName" msprop:Generator_ColumnVarNameInTable="columnBoatHouseName" msprop:Generator_ColumnPropNameInRow="BoatHouseName" msprop:Generator_ColumnPropNameInTable="BoatHouseNameColumn" msprop:Generator_UserColumnName="BoatHouseName" type="xs:string" minOccurs="0" />
+              <xs:element name="RowerId" msprop:Generator_ColumnVarNameInTable="columnRowerId" msprop:Generator_ColumnPropNameInRow="RowerId" msprop:Generator_ColumnPropNameInTable="RowerIdColumn" msprop:Generator_UserColumnName="RowerId" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

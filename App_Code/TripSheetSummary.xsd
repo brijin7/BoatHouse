@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TripSheetSummary" targetNamespace="http://tempuri.org/TripSheetSummary.xsd" xmlns:mstns="http://tempuri.org/TripSheetSummary.xsd" xmlns="http://tempuri.org/TripSheetSummary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TripSheetSummary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="TripSheetSummary" msprop:Generator_UserDSName="TripSheetSummary">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TripSheetSummary" msprop:Generator_TableClassName="TripSheetSummaryDataTable" msprop:Generator_TableVarName="tableTripSheetSummary" msprop:Generator_RowChangedName="TripSheetSummaryRowChanged" msprop:Generator_TablePropName="_TripSheetSummary" msprop:Generator_RowDeletingName="TripSheetSummaryRowDeleting" msprop:Generator_RowChangingName="TripSheetSummaryRowChanging" msprop:Generator_RowEvHandlerName="TripSheetSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="TripSheetSummaryRowDeleted" msprop:Generator_RowClassName="TripSheetSummaryRow" msprop:Generator_UserTableName="TripSheetSummary" msprop:Generator_RowEvArgName="TripSheetSummaryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BoatType" msprop:Generator_ColumnVarNameInTable="columnBoatType" msprop:Generator_ColumnPropNameInRow="BoatType" msprop:Generator_ColumnPropNameInTable="BoatTypeColumn" msprop:Generator_UserColumnName="BoatType" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatSeater" msprop:Generator_ColumnVarNameInTable="columnBoatSeater" msprop:Generator_ColumnPropNameInRow="BoatSeater" msprop:Generator_ColumnPropNameInTable="BoatSeaterColumn" msprop:Generator_UserColumnName="BoatSeater" type="xs:string" minOccurs="0" />
+              <xs:element name="NoOfTrips" msprop:Generator_ColumnVarNameInTable="columnNoOfTrips" msprop:Generator_ColumnPropNameInRow="NoOfTrips" msprop:Generator_ColumnPropNameInTable="NoOfTripsColumn" msprop:Generator_UserColumnName="NoOfTrips" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CollectionAmt" msprop:Generator_ColumnVarNameInTable="columnCollectionAmt" msprop:Generator_ColumnPropNameInRow="CollectionAmt" msprop:Generator_ColumnPropNameInTable="CollectionAmtColumn" msprop:Generator_UserColumnName="CollectionAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ClaimedDeposit" msprop:Generator_ColumnVarNameInTable="columnClaimedDeposit" msprop:Generator_ColumnPropNameInRow="ClaimedDeposit" msprop:Generator_ColumnPropNameInTable="ClaimedDepositColumn" msprop:Generator_UserColumnName="ClaimedDeposit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UnClaimedDeposit" msprop:Generator_ColumnVarNameInTable="columnUnClaimedDeposit" msprop:Generator_ColumnPropNameInRow="UnClaimedDeposit" msprop:Generator_ColumnPropNameInTable="UnClaimedDepositColumn" msprop:Generator_UserColumnName="UnClaimedDeposit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ExtendedAmt" msprop:Generator_ColumnVarNameInTable="columnExtendedAmt" msprop:Generator_ColumnPropNameInRow="ExtendedAmt" msprop:Generator_ColumnPropNameInTable="ExtendedAmtColumn" msprop:Generator_UserColumnName="ExtendedAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Roweramt" msprop:Generator_ColumnVarNameInTable="columnRoweramt" msprop:Generator_ColumnPropNameInRow="Roweramt" msprop:Generator_ColumnPropNameInTable="RoweramtColumn" msprop:Generator_UserColumnName="Roweramt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RowerSettlementAmt" msprop:Generator_ColumnVarNameInTable="columnRowerSettlementAmt" msprop:Generator_ColumnPropNameInRow="RowerSettlementAmt" msprop:Generator_ColumnPropNameInTable="RowerSettlementAmtColumn" msprop:Generator_UserColumnName="RowerSettlementAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BoatHouseName" msprop:Generator_ColumnVarNameInTable="columnBoatHouseName" msprop:Generator_ColumnPropNameInRow="BoatHouseName" msprop:Generator_ColumnPropNameInTable="BoatHouseNameColumn" msprop:Generator_UserColumnName="BoatHouseName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

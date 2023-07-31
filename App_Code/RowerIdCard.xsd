@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RowerIdCard" targetNamespace="http://tempuri.org/RowerIdCard.xsd" xmlns:mstns="http://tempuri.org/RowerIdCard.xsd" xmlns="http://tempuri.org/RowerIdCard.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RowerIdCard" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="RowerIdCard" msprop:Generator_DataSetName="RowerIdCard">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RowerIdCard" msprop:Generator_RowEvHandlerName="RowerIdCardRowChangeEventHandler" msprop:Generator_RowDeletedName="RowerIdCardRowDeleted" msprop:Generator_RowDeletingName="RowerIdCardRowDeleting" msprop:Generator_RowEvArgName="RowerIdCardRowChangeEvent" msprop:Generator_TablePropName="_RowerIdCard" msprop:Generator_RowChangedName="RowerIdCardRowChanged" msprop:Generator_UserTableName="RowerIdCard" msprop:Generator_RowChangingName="RowerIdCardRowChanging" msprop:Generator_RowClassName="RowerIdCardRow" msprop:Generator_TableClassName="RowerIdCardDataTable" msprop:Generator_TableVarName="tableRowerIdCard">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RowerId" msprop:Generator_ColumnPropNameInTable="RowerIdColumn" msprop:Generator_ColumnPropNameInRow="RowerId" msprop:Generator_UserColumnName="RowerId" msprop:Generator_ColumnVarNameInTable="columnRowerId" type="xs:string" minOccurs="0" />
+              <xs:element name="RowerName" msprop:Generator_ColumnPropNameInTable="RowerNameColumn" msprop:Generator_ColumnPropNameInRow="RowerName" msprop:Generator_UserColumnName="RowerName" msprop:Generator_ColumnVarNameInTable="columnRowerName" type="xs:string" minOccurs="0" />
+              <xs:element name="MobileNo" msprop:Generator_ColumnPropNameInTable="MobileNoColumn" msprop:Generator_ColumnPropNameInRow="MobileNo" msprop:Generator_UserColumnName="MobileNo" msprop:Generator_ColumnVarNameInTable="columnMobileNo" type="xs:string" minOccurs="0" />
+              <xs:element name="Address1" msprop:Generator_ColumnPropNameInTable="Address1Column" msprop:Generator_ColumnPropNameInRow="Address1" msprop:Generator_UserColumnName="Address1" msprop:Generator_ColumnVarNameInTable="columnAddress1" type="xs:string" minOccurs="0" />
+              <xs:element name="Zipcode" msprop:Generator_ColumnPropNameInTable="ZipcodeColumn" msprop:Generator_ColumnPropNameInRow="Zipcode" msprop:Generator_UserColumnName="Zipcode" msprop:Generator_ColumnVarNameInTable="columnZipcode" type="xs:string" minOccurs="0" />
+              <xs:element name="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_UserColumnName="City" msprop:Generator_ColumnVarNameInTable="columnCity" type="xs:string" minOccurs="0" />
+              <xs:element name="District" msprop:Generator_ColumnPropNameInTable="DistrictColumn" msprop:Generator_ColumnPropNameInRow="District" msprop:Generator_UserColumnName="District" msprop:Generator_ColumnVarNameInTable="columnDistrict" type="xs:string" minOccurs="0" />
+              <xs:element name="State" msprop:Generator_ColumnPropNameInTable="StateColumn" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_UserColumnName="State" msprop:Generator_ColumnVarNameInTable="columnState" type="xs:string" minOccurs="0" />
+              <xs:element name="PhotoLink" msprop:Generator_ColumnPropNameInTable="PhotoLinkColumn" msprop:Generator_ColumnPropNameInRow="PhotoLink" msprop:Generator_UserColumnName="PhotoLink" msprop:Generator_ColumnVarNameInTable="columnPhotoLink" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Image" msprop:Generator_ColumnPropNameInTable="ImageColumn" msprop:Generator_ColumnPropNameInRow="Image" msprop:Generator_UserColumnName="Image" msprop:Generator_ColumnVarNameInTable="columnImage" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_UserColumnName="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CorpLogo" msprop:Generator_UserColumnName="CorpLogo" msprop:Generator_ColumnPropNameInTable="CorpLogoColumn" msprop:Generator_ColumnPropNameInRow="CorpLogo" msprop:Generator_ColumnVarNameInTable="columnCorpLogo" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RowerIdCardImage" msprop:Generator_RowEvHandlerName="RowerIdCardImageRowChangeEventHandler" msprop:Generator_RowDeletedName="RowerIdCardImageRowDeleted" msprop:Generator_RowDeletingName="RowerIdCardImageRowDeleting" msprop:Generator_RowEvArgName="RowerIdCardImageRowChangeEvent" msprop:Generator_TablePropName="RowerIdCardImage" msprop:Generator_RowChangedName="RowerIdCardImageRowChanged" msprop:Generator_UserTableName="RowerIdCardImage" msprop:Generator_RowChangingName="RowerIdCardImageRowChanging" msprop:Generator_RowClassName="RowerIdCardImageRow" msprop:Generator_TableClassName="RowerIdCardImageDataTable" msprop:Generator_TableVarName="tableRowerIdCardImage">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PhotoLink" msprop:Generator_ColumnPropNameInTable="PhotoLinkColumn" msprop:Generator_ColumnPropNameInRow="PhotoLink" msprop:Generator_UserColumnName="PhotoLink" msprop:Generator_ColumnVarNameInTable="columnPhotoLink" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BoatIdCard" msprop:Generator_RowEvHandlerName="BoatIdCardRowChangeEventHandler" msprop:Generator_RowDeletedName="BoatIdCardRowDeleted" msprop:Generator_RowDeletingName="BoatIdCardRowDeleting" msprop:Generator_RowEvArgName="BoatIdCardRowChangeEvent" msprop:Generator_TablePropName="BoatIdCard" msprop:Generator_RowChangedName="BoatIdCardRowChanged" msprop:Generator_UserTableName="BoatIdCard" msprop:Generator_RowChangingName="BoatIdCardRowChanging" msprop:Generator_RowClassName="BoatIdCardRow" msprop:Generator_TableClassName="BoatIdCardDataTable" msprop:Generator_TableVarName="tableBoatIdCard">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BoatHouseId" msprop:Generator_ColumnPropNameInTable="BoatHouseIdColumn" msprop:Generator_ColumnPropNameInRow="BoatHouseId" msprop:Generator_UserColumnName="BoatHouseId" msprop:Generator_ColumnVarNameInTable="columnBoatHouseId" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatTypeId" msprop:Generator_ColumnPropNameInTable="BoatTypeIdColumn" msprop:Generator_ColumnPropNameInRow="BoatTypeId" msprop:Generator_UserColumnName="BoatTypeId" msprop:Generator_ColumnVarNameInTable="columnBoatTypeId" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatTypeName" msprop:Generator_ColumnPropNameInTable="BoatTypeNameColumn" msprop:Generator_ColumnPropNameInRow="BoatTypeName" msprop:Generator_UserColumnName="BoatTypeName" msprop:Generator_ColumnVarNameInTable="columnBoatTypeName" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatSeaterId" msprop:Generator_ColumnPropNameInTable="BoatSeaterIdColumn" msprop:Generator_ColumnPropNameInRow="BoatSeaterId" msprop:Generator_UserColumnName="BoatSeaterId" msprop:Generator_ColumnVarNameInTable="columnBoatSeaterId" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatSeaterName" msprop:Generator_ColumnPropNameInTable="BoatSeaterNameColumn" msprop:Generator_ColumnPropNameInRow="BoatSeaterName" msprop:Generator_UserColumnName="BoatSeaterName" msprop:Generator_ColumnVarNameInTable="columnBoatSeaterName" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatId" msprop:Generator_ColumnPropNameInTable="BoatIdColumn" msprop:Generator_ColumnPropNameInRow="BoatId" msprop:Generator_UserColumnName="BoatId" msprop:Generator_ColumnVarNameInTable="columnBoatId" type="xs:string" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_UserColumnName="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CorpLogo" msprop:Generator_ColumnPropNameInTable="CorpLogoColumn" msprop:Generator_ColumnPropNameInRow="CorpLogo" msprop:Generator_UserColumnName="CorpLogo" msprop:Generator_ColumnVarNameInTable="columnCorpLogo" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

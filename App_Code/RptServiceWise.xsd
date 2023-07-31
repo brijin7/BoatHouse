@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RptServiceWise" targetNamespace="http://tempuri.org/RptServiceWise.xsd" xmlns:mstns="http://tempuri.org/RptServiceWise.xsd" xmlns="http://tempuri.org/RptServiceWise.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RptServiceWise" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="RptServiceWise" msprop:Generator_UserDSName="RptServiceWise">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BoatingReport" msprop:Generator_TableClassName="BoatingReportDataTable" msprop:Generator_TableVarName="tableBoatingReport" msprop:Generator_RowChangedName="BoatingReportRowChanged" msprop:Generator_TablePropName="BoatingReport" msprop:Generator_RowDeletingName="BoatingReportRowDeleting" msprop:Generator_RowChangingName="BoatingReportRowChanging" msprop:Generator_RowEvHandlerName="BoatingReportRowChangeEventHandler" msprop:Generator_RowDeletedName="BoatingReportRowDeleted" msprop:Generator_RowClassName="BoatingReportRow" msprop:Generator_UserTableName="BoatingReport" msprop:Generator_RowEvArgName="BoatingReportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BoatHouseId" msprop:Generator_ColumnVarNameInTable="columnBoatHouseId" msprop:Generator_ColumnPropNameInRow="BoatHouseId" msprop:Generator_ColumnPropNameInTable="BoatHouseIdColumn" msprop:Generator_UserColumnName="BoatHouseId" type="xs:string" minOccurs="0" />
+              <xs:element name="BookingDate" msprop:Generator_ColumnVarNameInTable="columnBookingDate" msprop:Generator_ColumnPropNameInRow="BookingDate" msprop:Generator_ColumnPropNameInTable="BookingDateColumn" msprop:Generator_UserColumnName="BookingDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Particulars" msprop:Generator_ColumnVarNameInTable="columnParticulars" msprop:Generator_ColumnPropNameInRow="Particulars" msprop:Generator_ColumnPropNameInTable="ParticularsColumn" msprop:Generator_UserColumnName="Particulars" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CGST" msprop:Generator_ColumnVarNameInTable="columnCGST" msprop:Generator_ColumnPropNameInRow="CGST" msprop:Generator_ColumnPropNameInTable="CGSTColumn" msprop:Generator_UserColumnName="CGST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SGST" msprop:Generator_ColumnVarNameInTable="columnSGST" msprop:Generator_ColumnPropNameInRow="SGST" msprop:Generator_ColumnPropNameInTable="SGSTColumn" msprop:Generator_UserColumnName="SGST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalAmount" msprop:Generator_ColumnVarNameInTable="columnTotalAmount" msprop:Generator_ColumnPropNameInRow="TotalAmount" msprop:Generator_ColumnPropNameInTable="TotalAmountColumn" msprop:Generator_UserColumnName="TotalAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BoatType" msprop:Generator_ColumnVarNameInTable="columnBoatType" msprop:Generator_ColumnPropNameInRow="BoatType" msprop:Generator_ColumnPropNameInTable="BoatTypeColumn" msprop:Generator_UserColumnName="BoatType" type="xs:string" minOccurs="0" />
+              <xs:element name="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" msprop:Generator_UserColumnName="Count" type="xs:int" minOccurs="0" />
+              <xs:element name="orderid" msprop:Generator_ColumnVarNameInTable="columnorderid" msprop:Generator_ColumnPropNameInRow="orderid" msprop:Generator_ColumnPropNameInTable="orderidColumn" msprop:Generator_UserColumnName="orderid" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatTypeId" msprop:Generator_ColumnVarNameInTable="columnBoatTypeId" msprop:Generator_ColumnPropNameInRow="BoatTypeId" msprop:Generator_ColumnPropNameInTable="BoatTypeIdColumn" msprop:Generator_UserColumnName="BoatTypeId" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BoatingReportSub" msprop:Generator_TableClassName="BoatingReportSubDataTable" msprop:Generator_TableVarName="tableBoatingReportSub" msprop:Generator_RowChangedName="BoatingReportSubRowChanged" msprop:Generator_TablePropName="BoatingReportSub" msprop:Generator_RowDeletingName="BoatingReportSubRowDeleting" msprop:Generator_RowChangingName="BoatingReportSubRowChanging" msprop:Generator_RowEvHandlerName="BoatingReportSubRowChangeEventHandler" msprop:Generator_RowDeletedName="BoatingReportSubRowDeleted" msprop:Generator_RowClassName="BoatingReportSubRow" msprop:Generator_UserTableName="BoatingReportSub" msprop:Generator_RowEvArgName="BoatingReportSubRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BoatHouseId" msprop:Generator_ColumnVarNameInTable="columnBoatHouseId" msprop:Generator_ColumnPropNameInRow="BoatHouseId" msprop:Generator_ColumnPropNameInTable="BoatHouseIdColumn" msprop:Generator_UserColumnName="BoatHouseId" type="xs:string" minOccurs="0" />
+              <xs:element name="BookingDate" msprop:Generator_ColumnVarNameInTable="columnBookingDate" msprop:Generator_ColumnPropNameInRow="BookingDate" msprop:Generator_ColumnPropNameInTable="BookingDateColumn" msprop:Generator_UserColumnName="BookingDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Particulars" msprop:Generator_ColumnVarNameInTable="columnParticulars" msprop:Generator_ColumnPropNameInRow="Particulars" msprop:Generator_ColumnPropNameInTable="ParticularsColumn" msprop:Generator_UserColumnName="Particulars" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CGST" msprop:Generator_ColumnVarNameInTable="columnCGST" msprop:Generator_ColumnPropNameInRow="CGST" msprop:Generator_ColumnPropNameInTable="CGSTColumn" msprop:Generator_UserColumnName="CGST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SGST" msprop:Generator_ColumnVarNameInTable="columnSGST" msprop:Generator_ColumnPropNameInRow="SGST" msprop:Generator_ColumnPropNameInTable="SGSTColumn" msprop:Generator_UserColumnName="SGST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalAmount" msprop:Generator_ColumnVarNameInTable="columnTotalAmount" msprop:Generator_ColumnPropNameInRow="TotalAmount" msprop:Generator_ColumnPropNameInTable="TotalAmountColumn" msprop:Generator_UserColumnName="TotalAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BoatType" msprop:Generator_ColumnVarNameInTable="columnBoatType" msprop:Generator_ColumnPropNameInRow="BoatType" msprop:Generator_ColumnPropNameInTable="BoatTypeColumn" msprop:Generator_UserColumnName="BoatType" type="xs:string" minOccurs="0" />
+              <xs:element name="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" msprop:Generator_UserColumnName="Count" type="xs:int" minOccurs="0" />
+              <xs:element name="orderid" msprop:Generator_ColumnVarNameInTable="columnorderid" msprop:Generator_ColumnPropNameInRow="orderid" msprop:Generator_ColumnPropNameInTable="orderidColumn" msprop:Generator_UserColumnName="orderid" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatTypeId" msprop:Generator_ColumnVarNameInTable="columnBoatTypeId" msprop:Generator_ColumnPropNameInRow="BoatTypeId" msprop:Generator_ColumnPropNameInTable="BoatTypeIdColumn" msprop:Generator_UserColumnName="BoatTypeId" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BoatingReportMain" msprop:Generator_TableClassName="BoatingReportMainDataTable" msprop:Generator_TableVarName="tableBoatingReportMain" msprop:Generator_RowChangedName="BoatingReportMainRowChanged" msprop:Generator_TablePropName="BoatingReportMain" msprop:Generator_RowDeletingName="BoatingReportMainRowDeleting" msprop:Generator_RowChangingName="BoatingReportMainRowChanging" msprop:Generator_RowEvHandlerName="BoatingReportMainRowChangeEventHandler" msprop:Generator_RowDeletedName="BoatingReportMainRowDeleted" msprop:Generator_RowClassName="BoatingReportMainRow" msprop:Generator_UserTableName="BoatingReportMain" msprop:Generator_RowEvArgName="BoatingReportMainRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BoatHouseId" msprop:Generator_ColumnVarNameInTable="columnBoatHouseId" msprop:Generator_ColumnPropNameInRow="BoatHouseId" msprop:Generator_ColumnPropNameInTable="BoatHouseIdColumn" msprop:Generator_UserColumnName="BoatHouseId" type="xs:string" minOccurs="0" />
+              <xs:element name="BookingDate" msprop:Generator_ColumnVarNameInTable="columnBookingDate" msprop:Generator_ColumnPropNameInRow="BookingDate" msprop:Generator_ColumnPropNameInTable="BookingDateColumn" msprop:Generator_UserColumnName="BookingDate" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatType" msprop:Generator_ColumnVarNameInTable="columnBoatType" msprop:Generator_ColumnPropNameInRow="BoatType" msprop:Generator_ColumnPropNameInTable="BoatTypeColumn" msprop:Generator_UserColumnName="BoatType" type="xs:string" minOccurs="0" />
+              <xs:element name="BoatTypeId" msprop:Generator_ColumnVarNameInTable="columnBoatTypeId" msprop:Generator_ColumnPropNameInRow="BoatTypeId" msprop:Generator_ColumnPropNameInTable="BoatTypeIdColumn" msprop:Generator_UserColumnName="BoatTypeId" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OtherServiceSub" msprop:Generator_TableClassName="OtherServiceSubDataTable" msprop:Generator_TableVarName="tableOtherServiceSub" msprop:Generator_TablePropName="OtherServiceSub" msprop:Generator_RowDeletingName="OtherServiceSubRowDeleting" msprop:Generator_RowChangingName="OtherServiceSubRowChanging" msprop:Generator_RowEvHandlerName="OtherServiceSubRowChangeEventHandler" msprop:Generator_RowDeletedName="OtherServiceSubRowDeleted" msprop:Generator_UserTableName="OtherServiceSub" msprop:Generator_RowChangedName="OtherServiceSubRowChanged" msprop:Generator_RowEvArgName="OtherServiceSubRowChangeEvent" msprop:Generator_RowClassName="OtherServiceSubRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BoatHouseId" msprop:Generator_ColumnVarNameInTable="columnBoatHouseId" msprop:Generator_ColumnPropNameInRow="BoatHouseId" msprop:Generator_ColumnPropNameInTable="BoatHouseIdColumn" msprop:Generator_UserColumnName="BoatHouseId" type="xs:string" minOccurs="0" />
+              <xs:element name="BookingDate" msprop:Generator_ColumnVarNameInTable="columnBookingDate" msprop:Generator_ColumnPropNameInRow="BookingDate" msprop:Generator_ColumnPropNameInTable="BookingDateColumn" msprop:Generator_UserColumnName="BookingDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Particulars" msprop:Generator_ColumnVarNameInTable="columnParticulars" msprop:Generator_ColumnPropNameInRow="Particulars" msprop:Generator_ColumnPropNameInTable="ParticularsColumn" msprop:Generator_UserColumnName="Particulars" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CGST" msprop:Generator_ColumnVarNameInTable="columnCGST" msprop:Generator_ColumnPropNameInRow="CGST" msprop:Generator_ColumnPropNameInTable="CGSTColumn" msprop:Generator_UserColumnName="CGST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SGST" msprop:Generator_ColumnVarNameInTable="columnSGST" msprop:Generator_ColumnPropNameInRow="SGST" msprop:Generator_ColumnPropNameInTable="SGSTColumn" msprop:Generator_UserColumnName="SGST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalAmount" msprop:Generator_ColumnVarNameInTable="columnTotalAmount" msprop:Generator_ColumnPropNameInRow="TotalAmount" msprop:Generator_ColumnPropNameInTable="TotalAmountColumn" msprop:Generator_UserColumnName="TotalAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" msprop:Generator_UserColumnName="Count" type="xs:int" minOccurs="0" />
+              <xs:element name="ConfigName" msdata:Caption="CategoryName" msprop:Generator_ColumnVarNameInTable="columnConfigName" msprop:Generator_ColumnPropNameInRow="ConfigName" msprop:Generator_ColumnPropNameInTable="ConfigNameColumn" msprop:Generator_UserColumnName="ConfigName" type="xs:string" minOccurs="0" />
+              <xs:element name="ConfigID" msprop:Generator_ColumnVarNameInTable="columnConfigID" msprop:Generator_ColumnPropNameInRow="ConfigID" msprop:Generator_ColumnPropNameInTable="ConfigIDColumn" msprop:Generator_UserColumnName="ConfigID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OtherService" msprop:Generator_TableClassName="OtherServiceDataTable" msprop:Generator_TableVarName="tableOtherService" msprop:Generator_TablePropName="OtherService" msprop:Generator_RowDeletingName="OtherServiceRowDeleting" msprop:Generator_RowChangingName="OtherServiceRowChanging" msprop:Generator_RowEvHandlerName="OtherServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="OtherServiceRowDeleted" msprop:Generator_UserTableName="OtherService" msprop:Generator_RowChangedName="OtherServiceRowChanged" msprop:Generator_RowEvArgName="OtherServiceRowChangeEvent" msprop:Generator_RowClassName="OtherServiceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BoatHouseId" msprop:Generator_ColumnVarNameInTable="columnBoatHouseId" msprop:Generator_ColumnPropNameInRow="BoatHouseId" msprop:Generator_ColumnPropNameInTable="BoatHouseIdColumn" msprop:Generator_UserColumnName="BoatHouseId" type="xs:string" minOccurs="0" />
+              <xs:element name="BookingDate" msprop:Generator_ColumnVarNameInTable="columnBookingDate" msprop:Generator_ColumnPropNameInRow="BookingDate" msprop:Generator_ColumnPropNameInTable="BookingDateColumn" msprop:Generator_UserColumnName="BookingDate" type="xs:string" minOccurs="0" />
+              <xs:element name="ConfigName" msdata:Caption="CategoryName" msprop:Generator_ColumnVarNameInTable="columnConfigName" msprop:Generator_ColumnPropNameInRow="ConfigName" msprop:Generator_ColumnPropNameInTable="ConfigNameColumn" msprop:Generator_UserColumnName="ConfigName" type="xs:string" minOccurs="0" />
+              <xs:element name="ConfigID" msprop:Generator_ColumnVarNameInTable="columnConfigID" msprop:Generator_ColumnPropNameInRow="ConfigID" msprop:Generator_ColumnPropNameInTable="ConfigIDColumn" msprop:Generator_UserColumnName="ConfigID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,602 @@
+﻿
+.boat-unit {
+    height: 150px;
+    box-shadow: 0 0 10px 1px #929292;
+}
+
+.boat-image {
+    padding: 10px;
+}
+
+    .boat-image img {
+        width: 100%;
+        height: 130px;
+        box-shadow: -3px 3px 10px #a7a7a7;
+    }
+
+.p10 {
+    padding: 10px;
+}
+
+.boat-type-heading {
+    font-size: 20px;
+    font-weight: 500;
+    color: #0b5269;
+    letter-spacing: .5px;
+}
+
+.list-heading {
+    font-size: 12px;
+    display: inline-block;
+    color: #0065a9;
+    letter-spacing: 0.5px;
+}
+
+.list-vals {
+    font-weight: bold;
+    font-size: 14px;
+    color: #0f4c75;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+
+.boat-count-input {
+    width: 50% !important;
+    margin: auto;
+}
+
+.boat-check {
+    text-align: center;
+    padding: 10px;
+}
+
+.boat-list-chk input {
+    height: 25px;
+    width: 25px;
+    margin-right: 0 !important;
+}
+
+.boat-price-div {
+    background: linear-gradient(45deg, white 82%, #151965 0%);
+}
+
+.price-badge {
+    text-align: left;
+    color: white;
+    z-index: 1;
+    right: 0px;
+    top: 15px;
+    position: absolute;
+}
+
+    .price-badge h6 {
+        font-size: 20px;
+    }
+
+.boat-check-div {
+    background: linear-gradient(105deg, #151965 16%, white 8%);
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-body {
+    margin: 10px 15px;
+    background: #ffffff;
+    padding: 10px 2px;
+    padding-left: 10px;
+}
+
+.form-header {
+    margin: 10px 15px;
+}
+
+    .form-header .form-header-title {
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+.form-content {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: .375rem .75rem;
+    font-size: 14px !important;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+    .form-control:focus {
+        box-shadow: none !important;
+    }
+
+.mobile-id-input {
+    height: 50px;
+    font-size: 30px !important;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.form-header-summary {
+    padding: 18px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.payment-drop {
+    height: 36px;
+}
+
+.otherserv-list-input {
+    display: block;
+    padding-left: 10px;
+}
+
+.other-serv-chk {
+    margin-top: 30%;
+}
+
+
+
+
+.panel-group .panel + .panel {
+    margin-top: 5px;
+}
+
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+
+.panel-success {
+    border: 1px;
+    border-color: #d6e9c6;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.panel-success > .panel-heading {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+.panel-group .panel-heading {
+    border-bottom: 0;
+}
+
+.panel-heading {
+    padding: 5px 5px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panel-body {
+    padding: 10px;
+    border: 1px solid #d6e9c6;
+}
+
+.lblChrg {
+    padding: 10px 10px;
+}
+
+<style >
+.daterangepicker {
+    left: 470px;
+}
+
+.btntbody table tbody {
+    display: flex;
+}
+
+.dtlBoatType {
+    padding: 0px;
+    margin-bottom: 5px;
+    margin-left: 20px !important;
+    border-radius: 17px;
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, 0.26);
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.FinalSummary {
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 15px;
+    position: relative;
+}
+
+.grdTextAlign {
+    text-align: center;
+}
+
+
+/*ul li {
+            display: inline;
+            padding: 5px;
+        }*/
+
+.btnBoatSeater {
+    font-weight: bold;
+    width: 100px;
+    background-color: rgb(33, 136, 56) !important;
+}
+
+.Numpnl {
+    border-width: 0px;
+    visibility: visible;
+    position: absolute;
+    /*left: 0px !important;*/
+    top: 38px !important;
+}
+
+.button1 {
+    background-color: #e0e0e0;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #0d0c0c;
+    font-family: Arial;
+    font-size: 28px;
+    /*padding: 8px 8px;*/
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    outline: none;
+    margin: 5px;
+}
+
+    .button1:hover {
+        background-color: #5cbf2a;
+    }
+
+    .button1:active {
+        position: relative;
+        top: 1px;
+    }
+
+.btnlabel {
+    padding-right: 30px;
+    font-size: 30px;
+}
+
+#spanhovering {
+    cursor: pointer;
+}
+
+#divtoshow {
+    position: absolute;
+    display: none;
+}
+
+.buttonNor {
+    background-color: white;
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #0d0c0c;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 8px 8px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    outline: none;
+    margin: 5px;
+}
+
+.buttonOth {
+    background-color: #9ACD32;
+    border-radius: 8px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #0d0c0c;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 8px 8px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    outline: none;
+    margin: 5px;
+}
+
+.buttonNor:hover {
+    background-color: #C71585;
+    color: white;
+}
+
+.buttonNor:active {
+    position: relative;
+    top: 1px;
+}
+
+.buttonOth:hover {
+    background-color: #C71585;
+    color: white;
+}
+
+.buttonOth:active {
+    position: relative;
+    top: 1px;
+}
+
+
+.buttonPre {
+    background-color: #DB7093;
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #0d0c0c;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 8px 8px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    outline: none;
+    margin: 5px;
+}
+
+    .buttonPre:hover {
+        background-color: #C71585;
+        color: white;
+    }
+
+    .buttonPre:active {
+        position: relative;
+        top: 1px;
+    }
+
+.buttonClose {
+    background-color: lightseagreen;
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #0d0c0c;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 8px 8px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    outline: none;
+    margin: 5px;
+}
+
+    .buttonClose:hover {
+        background-color: #C71585;
+        color: white;
+    }
+
+    .buttonClose:active {
+        position: relative;
+        top: 1px;
+    }
+
+.btnFinal {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.4rem .5rem;
+    font-size: 2rem !important;
+    line-height: 1.5;
+    border-radius: 1.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btnPin {
+    display: inline-block;
+    font-weight: 300;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 5px 5px;
+    font-size: 1.5rem !important;
+    border-radius: 3px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.payMode {
+    width: 150px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*border: 1px solid transparent;
+            padding: 0.4rem .5rem;*/
+    font-size: 2rem !important;
+    line-height: 1.5;
+    border-radius: 2.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    outline: none;
+    padding-left: 20px;
+}
+
+.ddlborder {
+    border-radius: 8px;
+    border-color: skyblue;
+}
+
+.BarCodeTextStart {
+    width: 100%;
+    height: 30px;
+    border-color: skyblue;
+    border-radius: .25rem;
+    background-color: #FFF8C6;
+}
+
+.BarCodeTextEnd {
+    width: 500px;
+    height: 40px;
+    border-color: skyblue;
+    border-radius: 8px;
+    background-color: #FFF8C6;
+}
+
+.Msgg {
+    border: solid 1px #ffdead00;
+    width: 350px;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+}
+
+.blink {
+    animation: blink-animation 1s linear infinite;
+    -webkit-animation: blink-animation 1s linear infinite;
+}
+
+@keyframes blink-animation {
+    50% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    50% {
+        opacity: 0;
+    }
+}
+
+/*********************Individual TripSheet Web --starting*********************/
+/*Button Styles For Trip Start,End And Closed*/
+.ind_TripBtn {
+    padding-left: 15px;
+    margin-bottom: -5px;
+}
+
+.ind_TripHdg {
+    padding-top: 1.5rem;
+    padding-left: 3rem;
+    text-align: center;
+    display: inline;
+    font-size: 25px;
+}
+
+#Ind_Date {
+    display: inline;
+    overflow: auto;
+    float: right;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+    color: black;
+}
+
+#Ind_Time {
+    display: inline;
+    float: left;
+    color: black;
+    padding-left: 0.5rem;
+    padding-top: 1.5rem;
+}
+
+.Ind_Bg {
+    background-color: white;
+    overflow: auto;
+    max-height: 650px;
+    min-height: 550px;
+}
+
+.Ind_lblPosition {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.Ind_lblColor {
+    font-weight: 500;
+    color: #777;
+    font-size: 0.9rem;
+}
+.Ind_lblColorScanEnd {
+    font-weight: 500;
+    color: #fff;
+    font-size: 0.9rem;
+}
+.Ind_Rfv {
+    color: red;
+    float: right;
+}
+
+.Ind_Popup {
+    border: solid 1px #ffdead00;
+    width: 400px;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    position: fixed;
+    z-index: 100000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.Ind_lblMargin 
+{
+    margin-left:50px;
+}
+.lbl_sMsgPosition {
+    margin-left: 35%;
+}
+
+
+.ind_TripBtn1 {
+    margin-bottom: -5px;
+}
+
+.ind_TripHdg1 {
+    padding-top: 1.5rem;
+    padding-left: 10px;
+    text-align: center;
+    display: inline;
+    font-size: 25px;
+}
+
+/*Individual TripSheet Web --Ending*/
